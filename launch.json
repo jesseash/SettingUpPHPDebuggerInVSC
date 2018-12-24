@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "PowerShell",
+            "request": "launch",
+            "name": "Launch Internet Explorer",
+            "script": "fullpathtoscript\\launch.ps1",
+            "args": ["${file}"],
+            "cwd": "${file}"
+        },
+        
+        {
+            "name": "Listen for XDebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9000,
+           "postDebugTask": "killie"
+        },
+        
+    ],
+    "compounds": [
+        {
+            "name": "Listen for XDebug/Launch Internet Explorer",
+            "configurations": ["Listen for XDebug", "Launch Internet Explorer"]
+        }
+    ]
+    
+
+
+}

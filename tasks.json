@@ -1,0 +1,25 @@
+
+
+
+
+{   "version": "2.0.0",
+    
+    "tasks":[
+
+    {"label": "killie",     
+        "type":"shell",
+        "command": "Shell",
+        "windows": {
+            "command": "kill.bat"                
+        },
+        "args": [
+            "${file}"
+        ]
+        }
+
+
+]
+
+
+} 
+
